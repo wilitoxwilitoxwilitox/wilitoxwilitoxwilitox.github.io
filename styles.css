@@ -1,0 +1,45 @@
+
+
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: grey;
+}
+
+.cover-fullscreen {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.hide {
+    display: None;
+}
+
+#buttondulceotruco {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.button {
+    padding: 10px;
+}
+
+#sectiongato{
+    position: relative;
+    width: 40%;
+    margin: 0 auto;
+}
+
+#imggato {
+    width: 100%;
+    height: 100%;
+}
+
+.kiss{
+    position: absolute;  
+    width: 100px;
+    height: 100px;
+}
