@@ -2,8 +2,8 @@
 let main = document.getElementById("main");
 let buttonDulceOTruco = document.getElementById("buttondulceotruco");
 let imgDulceOTruco = document.getElementById("imgdulceotruco");
-buttonDulceOTruco.onclick = showImgDulceOTruco;
-function showImgDulceOTruco(){
+buttonDulceOTruco.onclick = function() {showImgDulceOTruco(main, imgDulceOTruco)};
+function showImgDulceOTruco(main, imgDulceOTruco){
     main.className = "hide";
     imgDulceOTruco.className = "cover-fullscreen";
 }
@@ -28,15 +28,15 @@ function giveKiss(){
     newKiss.src = "kiss.png";
     newKiss.alt = "A kiss for the image UwU";
     newKiss.className = "kiss";
-    let top = getRandomTopOrLeft(imgGato.height-100);
-    let left = getRandomTopOrLeft(imgGato.width-100);
+    let top = getRandomTopOrLeft(0, imgGato.height-100);
+    let left = getRandomTopOrLeft(100, imgGato.width-200);
     newKiss.style.top = top;
     newKiss.style.left = left;
     sectionGato.appendChild(newKiss);
 }
 
-function getRandomTopOrLeft(dimension){
-    return String(getRandomIntInclusive(0, dimension)) + "px";
+function getRandomTopOrLeft(start, dimension){
+    return String(getRandomIntInclusive(start, dimension)) + "px";
 }
 
 function getRandomIntInclusive(min, max) {
